@@ -1,0 +1,367 @@
+body {
+    background: #f1f1f1;
+    padding: 0;
+    margin: 0;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas: "nav nav nav" "contacto contacto contacto" "carrusel carrusel carrusel" "prin_supe prin_supe prin_supe" "contenido contenido contenido" "footer footer footer";
+}
+
+.contenedor .nav {
+    grid-area: nav;
+}
+
+.contenedor .contacto {
+    grid-area: contacto;
+}
+
+.contenedor .carrusel {
+    grid-area: carrusel;
+}
+
+.contenedor .prin_supe {
+    grid-area: prin_supe;
+}
+
+.contenedor .contenido {
+    grid-area: contenido;
+}
+
+.contenedor .footer {
+    grid-area: footer;
+}
+
+.contenedor .nav {
+    background: #fff;
+}
+
+.contenedor .nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #191919;
+    list-style: none;
+    margin: 0;
+    padding: 1em 1em;
+}
+
+.contenedor .nav ul .redes_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.contenedor .nav ul .login_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.contenedor .nav ul .redes_header,
+.contenedor .nav ul .login_header {
+    padding: 0 3em;
+}
+
+.contenedor .nav ul .redes_header li a {
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #ccc;
+    padding: 0 0.5em;
+    font-size: 20px;
+}
+
+.contenedor .nav ul .login_header li a {
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #ccc;
+    padding: 0 2em;
+    transition: 0.5s;
+}
+
+.contenedor .nav ul .redes_header li a:hover,
+.contenedor .nav ul .login_header li a:hover {
+    color: #f1f1f1;
+}
+
+.contenedor .contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contenedor .contacto .logo {
+    width: 200px;
+    height: auto;
+}
+
+.contenedor .contacto .logo a img {
+    width: 100%;
+    height: auto;
+}
+
+.contenedor .contacto .logo_nav {
+    margin: 2em 1em;
+}
+
+.contenedor .contacto .logo_nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 1em 1em;
+    background: #FF0000;
+    border-radius: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: 0.5s;
+}
+
+.contenedor .contacto .logo_nav a:hover {
+    color: #ccc;
+    background: #B22222;
+}
+
+.contenedor .carrusel .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor .carrusel .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.contenedor .carrusel .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenedor .carrusel .swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenedor .carrusel {
+    padding-bottom: 1em;
+}
+
+.contenedor .prin_supe {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 2em;
+    padding-bottom: 3em;
+    flex-wrap: wrap;
+}
+
+.contenedor .prin_supe .card {
+    width: 22%;
+    height: 200px;
+    padding: 0 1em;
+}
+
+.contenedor .prin_supe .card:hover {
+    box-shadow: 13px;
+}
+
+.contenedor .prin_supe .card h1 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background: #FF0000;
+    text-align: center;
+    position: relative;
+    top: 15px;
+    z-index: 1;
+}
+
+.contenedor .prin_supe .card img {
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.contenedor .prin_supe .card a img:hover {
+    transform: scale(1.05);
+}
+
+.contenedor .contenido {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor .contenido h3 {
+    padding: 0 0;
+    margin: 1em 5em;
+    color: #365d6d;
+    width: 13em;
+    border-bottom: #365d6d 3px solid;
+}
+
+.contenedor .contenido .paquetes_turisticos {
+    display: flex;
+    flex-direction: row;
+    padding: 0 5em;
+    flex-wrap: wrap;
+}
+
+.contenedor .contenido .paquetes_turisticos .card {
+    width: 22%;
+    height: auto;
+    margin: 1em 1em;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.contenedor .contenido .paquetes_turisticos .card:hover {
+    transform: scale(1.02);
+    background: #f1f1f1;
+    box-shadow: 5px 5px 10px;
+}
+
+.contenedor .contenido .paquetes_turisticos .card a {
+    text-decoration: none;
+}
+
+.contenedor .contenido .paquetes_turisticos .card a h2 {
+    text-align: center;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #365d6d;
+}
+
+.contenedor .contenido .paquetes_turisticos .card img {
+    width: 100%;
+    height: 70%;
+}
+
+.contenedor .footer {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 1em;
+    background: #191919;
+}
+
+.contenedor .footer .footer_pureq {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contenedor .footer .footer_pureq .contactos ul li {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f1f1f1;
+    border-bottom: #f1f1f1 1px solid;
+    margin-bottom: 0.5em;
+}
+
+.contenedor .footer .footer_pureq .redes_sociales ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.contenedor .footer .footer_pureq .redes_sociales ul li {
+    list-style: none;
+    padding: 0 0.5em;
+}
+
+.contenedor .footer .footer_pureq .redes_sociales ul .facebook a i {
+    font-size: 40px;
+    color: #3b5998;
+}
+
+.contenedor .footer .footer_pureq .redes_sociales ul .twitter a i {
+    font-size: 40px;
+    color: #00acee;
+}
+
+.contenedor .footer .footer_pureq .redes_sociales ul .whatsapp a i {
+    font-size: 40px;
+    color: #00bb2d;
+}
+
+.contenedor .footer .footer_pureq .redes_sociales ul .instagram a i {
+    font-size: 40px;
+    color: #C13584;
+}
+
+.contenedor .footer .footer_pureq .redes_sociales ul .tiktok a i {
+    font-size: 40px;
+    color: #FE2C55;
+}
+
+.contenedor .footer .footer_pureq .socios {}
+
+.contenedor .footer .footer_pureq .socios ul li a img {
+    width: 300px;
+}
+
+.contenedor .footer .footer_pureq .socios ul li {
+    list-style: none;
+}
+
+.contenedor .footer .derechos_reservados {
+    padding-top: 1em;
+    color: #f1f1f1;
+}
+
+.contenedor .footer .footer_pureq .contactos h3,
+.contenedor .footer .footer_pureq .redes_sociales h3,
+.contenedor .footer .footer_pureq .socios h3 {
+    align-self: center;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f1f1f1;
+}
+
+.contenedor .informacion_nosotros {
+    color: #fff;
+    padding: 2em 2em;
+}
+
+.contenedor .informacion_nosotros h2 {
+    color: #365d6d;
+}
+
+.contenedor .informacion_nosotros p {
+    color: #365d6d;
+}
+
+.contenedor .informacion_producto .portada {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contenedor .informacion_producto .portada .titulo_paquete {
+    background: cornsilk;
+    opacity: 0.8;
+    padding: 2em 1em;
+}
+
+.contenedor .informacion_producto .portada .paquete_imagen {
+    width: 30%;
+    opacity: 0.5;
+    border: cornsilk 3px solid;
+}

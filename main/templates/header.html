@@ -1,0 +1,29 @@
+{% load static %}
+<nav class="nav">
+    <ul>
+        <div class="redes_header">
+            <li><a href=""><i class="fab fa-facebook"></i></a></li>
+            <li><a href=""><i class="fab fa-whatsapp"></i></a></li>
+            <li><a href=""><i class="fab fa-tiktok"></i></a></li>
+        </div>
+        <div class="login_header">
+            <li><a href="{%url 'index'%}">INICIO</a></li>
+            <li><a href="{%url 'nosotros'%}">NOSOTROS</a>
+            </li>
+            <li><a href="{%url 'registro'%}"><i class="fas fa-user"></i> REGISTRARSE</a>
+            </li>
+            <li><a href="{%url 'paquetes_turisticos'%}"><i class="fas fa-sign-in-alt"></i> INICIAR SESIÓN</a>
+            </li>
+        </div>
+    </ul>
+</nav>
+<div class="contacto">
+    <div class="logo">
+        <a href=""><img src="{% static 'img/pureq_logo.png'%}" alt="Megafly"></a>
+    </div>
+    <div class="logo_nav">
+        <a href="{%url 'paquetes_turisticos'%}"><i class="fas fa-box-open"></i> PAQUETES TURISTICOS</a>
+        <a href=""><i class="fas fa-calendar-alt"></i> EVENTOS</a>
+        <a href=""><i class="fas fa-photo-video"></i >GALERIA DE TURISMO</a>
+    </div>
+</div>

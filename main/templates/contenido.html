@@ -1,0 +1,45 @@
+{%load static%}
+<div class="contenido">
+    <h3>PAQUETES TURISTICOS</h3>
+    <div class="paquetes_turisticos">
+        {% for paquete in paquetes %}
+        <div class="card">
+            <img src="{{paquete.galeria.img1.url}}" alt="">
+            <a href="{%url 'paquete' slug=paquete.slug_paquete%}"><h2>{{paquete.nombre}}</h2>
+            <h2> Hora Salida: {{paquete.hora_salida}}</h2>
+            <h2> Hora Llegada: {{paquete.hora_entrada}}</h2>
+            <h2>Precio Paquete: S/. {{paquete.precio}}</h2></a>
+        </div>
+        {% endfor %}
+    </div>
+    <h3>PAQUETES EXCLUSIVOS</h3>
+    <div class="paquetes_turisticos">
+        {% for paquete in paquetes %}
+        <div class="card">
+            <img src="{{paquete.galeria.img1.url}}" alt="">
+           <a href="{%url 'paquete' slug=paquete.slug_paquete%}"><h2>{{paquete.nombre}}</h2>
+            <h2> Hora Salida: {{paquete.hora_salida}}</h2>
+            <h2> Hora Llegada: {{paquete.hora_entrada}}</h2>
+            <h2>Precio Paquete: S/. {{paquete.precio}}</h2></a>
+        </div>
+        {% endfor %}
+    </div>
+    <h3>GALERIA DE FOTOS</h3>
+    <div class="carrusel">
+            <!-- Swiper -->
+            <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="{% static 'img/galeria_imagenes1.jpg'%}" style="width: 1500px;height: 500px;" alt=""></div>
+                    <div class="swiper-slide"><img src="{% static 'img/galeria_imagenes2.jpg'%}" style="width: 1500px;height: 500px;" alt=""></div>
+                    <div class="swiper-slide"><img src="{% static 'img/galeria_imagenes3.jpg'%}" style="width: 1500px;height: 500px;" alt=""></div>
+                    <div class="swiper-slide"><img src="{% static 'img/galeria_imagenes4.jpg'%}" style="width: 1500px;height: 500px;" alt=""></div>
+                    <div class="swiper-slide"><img src="{% static 'img/galeria_imagenes5.jpg'%}" style="width: 1500px;height: 500px;" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- Swiper JS -->
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+            <script src="{%static 'js/script.js' %}"></script>
+    </div>
+</div>
