@@ -1,0 +1,326 @@
+body {
+    background: #f1f1f1;
+    padding: 0;
+    margin: 0;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas: "nav nav nav" "contacto contacto contacto" "informacion_producto informacion_producto informacion_producto" "detalles_producto detalles_producto detalles_producto" "detalles_paquete detalles_paquete detalles_paquete" "paquetes_similares paquetes_similares paquetes_similares" "footer footer footer";
+}
+
+.contenedor .nav {
+    grid-area: nav;
+}
+
+.contenedor .contacto {
+    grid-area: contacto;
+}
+
+.contenedor .footer {
+    grid-area: footer;
+}
+
+.contenedor .informacion_producto {
+    grid-area: informacion_producto;
+}
+
+.contenedor .detalles_producto {
+    grid-area: detalles_producto;
+}
+
+.contenedor .detalles_paquete {
+    grid-area: detalles_paquete;
+}
+
+.contenedor .paquetes_similares {
+    grid-area: paquetes_similares;
+}
+
+.contenedor .nav {
+    background: #fff;
+}
+
+.contenedor .nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #191919;
+    list-style: none;
+    margin: 0;
+    padding: 1em 1em;
+}
+
+.contenedor .nav ul .redes_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.contenedor .nav ul .login_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.contenedor .nav ul .redes_header,
+.contenedor .nav ul .login_header {
+    padding: 0 3em;
+}
+
+.contenedor .nav ul .redes_header li a {
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #ccc;
+    padding: 0 0.5em;
+    font-size: 20px;
+}
+
+.contenedor .nav ul .login_header li a {
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #ccc;
+    padding: 0 2em;
+    transition: 0.5s;
+}
+
+.contenedor .nav ul .redes_header li a:hover,
+.contenedor .nav ul .login_header li a:hover {
+    color: #f1f1f1;
+}
+
+.contenedor .contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contenedor .contacto .logo {
+    width: 200px;
+    height: auto;
+}
+
+.contenedor .contacto .logo a img {
+    width: 100%;
+    height: auto;
+}
+
+.contenedor .contacto .logo_nav {
+    margin: 2em 1em;
+}
+
+.contenedor .contacto .logo_nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 1em 1em;
+    background: #FF0000;
+    border-radius: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: 0.5s;
+}
+
+.contenedor .contacto .logo_nav a:hover {
+    color: #ccc;
+    background: #B22222;
+}
+
+.contenedor .footer {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 1em;
+    background: #191919;
+}
+
+.contenedor .footer .footer_pureq {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contenedor .footer .footer_pureq .contactos ul li {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f1f1f1;
+    border-bottom: #f1f1f1 1px solid;
+    margin-bottom: 0.5em;
+}
+
+.contenedor .footer .footer_pureq .redes_sociales ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.contenedor .footer .footer_pureq .redes_sociales ul li {
+    list-style: none;
+    padding: 0 0.5em;
+}
+
+.contenedor .footer .footer_pureq .redes_sociales ul .facebook a i {
+    font-size: 40px;
+    color: #3b5998;
+}
+
+.contenedor .footer .footer_pureq .redes_sociales ul .twitter a i {
+    font-size: 40px;
+    color: #00acee;
+}
+
+.contenedor .footer .footer_pureq .redes_sociales ul .whatsapp a i {
+    font-size: 40px;
+    color: #00bb2d;
+}
+
+.contenedor .footer .footer_pureq .redes_sociales ul .instagram a i {
+    font-size: 40px;
+    color: #C13584;
+}
+
+.contenedor .footer .footer_pureq .redes_sociales ul .tiktok a i {
+    font-size: 40px;
+    color: #FE2C55;
+}
+
+.contenedor .footer .footer_pureq .socios {}
+
+.contenedor .footer .footer_pureq .socios ul li a img {
+    width: 300px;
+}
+
+.contenedor .footer .footer_pureq .socios ul li {
+    list-style: none;
+}
+
+.contenedor .footer .derechos_reservados {
+    padding-top: 1em;
+    color: #f1f1f1;
+}
+
+.contenedor .footer .footer_pureq .contactos h3,
+.contenedor .footer .footer_pureq .redes_sociales h3,
+.contenedor .footer .footer_pureq .socios h3 {
+    align-self: center;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f1f1f1;
+}
+
+.contenedor .informacion_producto .portada {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1em 1em;
+    padding: 3em 0;
+    background: #fff;
+}
+
+.contenedor .informacion_producto .portada .titulo_paquete {
+    background: #fff;
+    opacity: 0.7;
+    margin-right: 3em;
+    padding: 2em 1em;
+    align-self: center;
+    text-align: center;
+}
+
+.contenedor .informacion_producto .portada .titulo_paquete h1,
+.contenedor .informacion_producto .portada .titulo_paquete h2,
+.contenedor .informacion_producto .portada .titulo_paquete h3 {
+    align-self: center;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #365d6d;
+}
+
+.contenedor .informacion_producto .portada .titulo_paquete h2,
+.contenedor .informacion_producto .portada .titulo_paquete h3 {
+    font-size: 18px;
+}
+
+.contenedor .informacion_producto .portada .paquete_imagen {
+    width: 400px;
+    height: 300px;
+    opacity: 0.9;
+    border: #191919 10px solid;
+    margin-left: 3em;
+}
+
+.contenedor .informacion_producto .portada .paquete_imagen img {
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor .detalles_producto .galeria_imagenes {
+    display: flex;
+    flex-direction: row;
+}
+
+.contenedor .detalles_producto .galeria_imagenes img {
+    width: 25%;
+    flex-wrap: wrap;
+}
+
+.contenedor .detalles_paquete {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contenedor .detalles_paquete .recorrido,
+.contenedor .detalles_paquete .incluye {
+    font-size: 17px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.contenedor .detalles_paquete .recorrido h3,
+h4 {
+    color: #FF0000;
+}
+
+.contenedor .detalles_paquete .incluye h3 {
+    font-size: 15px;
+}
+
+.contenedor .paquetes_similares h3 {
+    font-size: 18px;
+    margin-left: 3em;
+    color: brown;
+}
+
+.contenedor .paquetes_similares .similares_card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contenedor .paquetes_similares .similares_card .card {
+    width: 20%;
+    margin: 1em 1em;
+    padding: 1em 1em;
+    background: #fff;
+    transition: 0.3s;
+}
+
+.contenedor .paquetes_similares .similares_card .card:hover {
+    transform: scale(1.02);
+    background: #f1f1f1;
+    box-shadow: 5px 5px 10px;
+}
+
+.contenedor .paquetes_similares .similares_card .card a {
+    text-decoration: none;
+    color: brown;
+}
+
+.contenedor .paquetes_similares .similares_card .card img {
+    width: 100%;
+    height: 50%;
+}
+
+.contenedor .paquetes_similares .similares_card .card a h2 {
+    font-size: 15px;
+    font-family: cursive;
+    text-align: center;
+}
